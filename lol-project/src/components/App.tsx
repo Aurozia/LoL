@@ -1,10 +1,9 @@
-import React from 'react'
+import Layout from "./Layout/Layout.tsx";
 
 export default function App() {
   return (
-    <div className='app'>
-      <h1>App</h1>
-      <p>LoL</p>
-    </div>
-  )
+    <>
+      <Layout />
+    </>
+  );
 }

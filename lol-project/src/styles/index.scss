@@ -14,18 +14,148 @@ body {
   min-height: 100vh;
   font-family: 'WorkSans', sans-serif;
   font-size: 1em;
+  font-weight: 500;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
 }
 
-.app {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 1em;
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 h1 {
   font-family: 'Nunito', sans-serif;
   font-size: 3em;
+  font-weight: 700;
+  text-shadow: 0 0 10px black;
+}
+
+.header {
+  background: linear-gradient(#2C3A50, #3d5e79, #2C3A50);
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 5rem;
+  padding: 0 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.5;
+  }
+
+  &-menu {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  & .menu-button {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.7em;
+    font-weight: 500;
+    text-shadow: 0 0 10px black;
+  }
+
+  & .menu-button:after {
+    content: '❯';
+    font-size: 0.5em;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+
+    animation: rotationFleche 0.3s linear forwards;
+  }
+
+  @keyframes rotationFleche {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
+
+  @keyframes rotationFlecheHover {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+  }
+
+  & .menu-button.clicked:after {
+    animation: rotationFlecheHover 0.3s linear forwards;
+  }
+
+  & .menu-champion {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: v.$text;
+    color: black;
+    padding: 0;
+    overflow-y: auto;
+
+    display: block;
+    position: absolute;
+    top: 3.5rem;
+    opacity: 0;
+
+    transition: max-height 0.3s ease, opacity 0.3s ease ;
+  }
+
+  & .menu-champion.visible {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  & .menu-champion.hidden {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  & .menu-champion-item {
+    background-color: v.$text;
+    color: black;
+    font-size: 1.2em;
+    padding: 0.5rem 1rem;
+  }
+
+  & .menu-champion-item:hover {
+    background-color: v.$secondary;
+  }
+}
+
+footer {
+  width: 90%;
+  color: #b69d9d;
+  padding: 2rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  padding: 1em;
+  margin-top: 5rem;
+  flex: 1;
 }
