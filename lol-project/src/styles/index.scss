@@ -168,6 +168,10 @@ main {
   padding: 1em;
   margin-top: 5rem;
   flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul.list {
@@ -209,4 +213,67 @@ ul.list {
 
 .card-champion:hover {
   transform: scale(1.1);
+}
+
+.data-champion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  &-picture,
+  &-section {
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  &-picture {
+    pointer-events: none;
+    box-shadow: 0 0 5px #00000050;
+  }
+
+  &-section {
+    background-color: #00000050;
+    box-shadow: 0 0 5px #FFFFFF50;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    & h3 {
+      font-size: 2rem;
+    }
+
+    & span {
+      color: #C9C9C9;
+      font-size: 1.3rem;
+      display: block;
+      font-style: italic;
+    }
+  }
+
+  &-date {
+    font-size: 1rem;
+  }
+
+  & .wrapper {
+    line-height: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &-info {
+    padding: 1rem;
+  }
+
+  &-description {
+    text-align: justify;
+  }
+}
+
+img.data-champion-role,
+img.data-champion-type {
+  width: 50px;
 }

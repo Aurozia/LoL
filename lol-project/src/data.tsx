@@ -2,20 +2,75 @@
 import { Champion, Role, Type } from "./types/types";
 
 export const typeData: Type[] = [
-  { id: 1, name: "Assassin", slug: "/role/assasin" },
-  { id: 2, name: "Combattant", slug: "/role/combattant" },
-  { id: 3, name: "Mage", slug: "/role/mage" },
-  { id: 4, name: "Support", slug: "/role/support" },
-  { id: 5, name: "Tank", slug: "/role/tank" },
-  { id: 6, name: "Tireur", slug: "/role/tireur" },
+  {
+    id: 1,
+    name: "Assassin",
+    slug: "/type/assasin",
+    picture: "/src/assets/types/assassin.png",
+  },
+  {
+    id: 2,
+    name: "Combattant",
+    slug: "/type/combattant",
+    picture: "/src/assets/types/combattant.png",
+  },
+  {
+    id: 3,
+    name: "Mage",
+    slug: "/type/mage",
+    picture: "/src/assets/types/mage.png",
+  },
+  {
+    id: 4,
+    name: "Support",
+    slug: "/type/support",
+    picture: "/src/assets/types/support.png",
+  },
+  {
+    id: 5,
+    name: "Tank",
+    slug: "/type/tank",
+    picture: "/src/assets/types/tank.png",
+  },
+  {
+    id: 6,
+    name: "Tireur",
+    slug: "/type/tireur",
+    picture: "/src/assets/types/tireur.png",
+  },
 ];
 
 export const roleData: Role[] = [
-  { id: 1, name: "Top", slug: "/type/top" },
-  { id: 2, name: "Jungle", slug: "/type/jungle" },
-  { id: 3, name: "Mid", slug: "/type/mid" },
-  { id: 4, name: "ADC", slug: "/type/adc" },
-  { id: 5, name: "Support", slug: "/type/support" },
+  {
+    id: 1,
+    name: "Top",
+    slug: "/role/top",
+    picture: "/src/assets/roles/top.png",
+  },
+  {
+    id: 2,
+    name: "Jungle",
+    slug: "/role/jungle",
+    picture: "/src/assets/roles/jungle.png",
+  },
+  {
+    id: 3,
+    name: "Mid",
+    slug: "/role/mid",
+    picture: "/src/assets/roles/mid.png",
+  },
+  {
+    id: 4,
+    name: "ADC",
+    slug: "/role/adc",
+    picture: "/src/assets/roles/adc.png",
+  },
+  {
+    id: 5,
+    name: "Support",
+    slug: "/role/support",
+    picture: "/src/assets/roles/support.png",
+  },
 ];
 
 function findRoleByName(name: string): Role | undefined {

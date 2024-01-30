@@ -14,10 +14,12 @@ export interface Role {
   id: number;
   name: string;
   slug: string;
+  picture: string;
 }
 
 export interface Type {
   id: number;
   name: string;
   slug: string;
+  picture: string;
 }
