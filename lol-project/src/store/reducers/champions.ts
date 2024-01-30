@@ -9,6 +9,7 @@ interface ChampionsState {
   list: Champion[];
   header: boolean;
 }
+
 export const initialState: ChampionsState = {
   list: championData,
   header: false,

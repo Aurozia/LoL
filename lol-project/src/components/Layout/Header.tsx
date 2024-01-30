@@ -31,8 +31,8 @@ export default function Header() {
             type="button"
             onClick={() => {
               dispatch(championList(true));
-              if(openRoleList) dispatch(roleList(false));
-              if(openTypeList) dispatch(typeList(false));
+              if (openRoleList) dispatch(roleList(false));
+              if (openTypeList) dispatch(typeList(false));
             }}
           >
             Champions
@@ -57,8 +57,8 @@ export default function Header() {
             type="button"
             onClick={() => {
               dispatch(roleList(true));
-              if(openChampionList) dispatch(championList(false));
-              if(openTypeList) dispatch(typeList(false));
+              if (openChampionList) dispatch(championList(false));
+              if (openTypeList) dispatch(typeList(false));
             }}
           >
             Rôles
@@ -77,8 +77,8 @@ export default function Header() {
             type="button"
             onClick={() => {
               dispatch(typeList(true));
-              if(openChampionList) dispatch(championList(false));
-              if(openRoleList) dispatch(roleList(false));
+              if (openChampionList) dispatch(championList(false));
+              if (openRoleList) dispatch(roleList(false));
             }}
           >
             Types
