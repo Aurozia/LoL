@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { useAppSelector } from "../hooks/redux.ts";
 import { findChampion } from "../store/selectors/champions.ts";
@@ -31,22 +31,26 @@ export default function ChampionData() {
         </p>
 
         <div className="wrapper">
-          <article>
-            <img
-              className="data-champion-role"
-              src={`${champion.role.picture}`}
-              alt={`Role ${champion.role.name}`}
-            />
-            <p className="data-champion-info">{champion.role.name}</p>
-          </article>
-          <article>
-            <img
-              className="data-champion-type"
-              src={`${champion.type.picture}`}
-              alt={`Type ${champion.type.name}`}
-            />
-            <p className="data-champion-info">{champion.type.name}</p>
-          </article>
+          <Link to={`/role/${champion.role.slug}`}>
+            <article>
+              <img
+                className="data-champion-role"
+                src={`${champion.role.picture}`}
+                alt={`Role ${champion.role.name}`}
+              />
+              <p className="data-champion-info">{champion.role.name}</p>
+            </article>
+          </Link>
+          <Link to={`/type/${champion.type.slug}`}>
+            <article>
+              <img
+                className="data-champion-type"
+                src={`${champion.type.picture}`}
+                alt={`Type ${champion.type.name}`}
+              />
+              <p className="data-champion-info">{champion.type.name}</p>
+            </article>
+          </Link>
         </div>
         <p className="data-champion-description">{champion.description}</p>
       </section>
