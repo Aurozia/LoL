@@ -9,14 +9,12 @@ interface Props {
 }
 
 export default function ChampionCard({ champion }: Props) {
-  console.log(champion.name);
-
   return (
     <li
       className="card-champion"
       style={{ backgroundImage: `url(${champion.picture})` }}
     >
-      <Link to={champion.slug}>
+      <Link to={`/champion/${champion.slug}`}>
         <p className="card-champion-name">{champion.name}</p>
       </Link>
     </li>

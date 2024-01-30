@@ -1,9 +1,9 @@
-import { createAction, createReducer } from '@reduxjs/toolkit';
+import { createAction, createReducer } from "@reduxjs/toolkit";
 
 // import data from '../../data';
-import { championData } from '../../data.tsx';
+import { championData } from "../../data.tsx";
 // import types from '../../types';
-import { Champion } from '../../types/types';
+import { Champion } from "../../types/types";
 
 interface ChampionsState {
   list: Champion[];
@@ -15,13 +15,12 @@ export const initialState: ChampionsState = {
   header: false,
 };
 
-export const championList = createAction<boolean>('champion/champion-list')
+export const championList = createAction<boolean>("champion/champion-list");
 
 const championsReducer = createReducer(initialState, (builder) => {
-  builder
-    .addCase(championList, (state, action) => {
-      state.header = action.payload;
-    });
+  builder.addCase(championList, (state, action) => {
+    state.header = action.payload;
+  });
 });
 
 export default championsReducer;

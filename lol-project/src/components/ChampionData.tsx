@@ -1,8 +1,18 @@
+import { useParams } from "react-router-dom";
+
 import { useAppSelector } from "../hooks/redux.ts";
+import { findChampion } from "../store/selectors/champions.ts";
 
 export default function ChampionData() {
-  const champion = useAppSelector((state) => state.champions.list[0]);
+  const { slug } = useParams();
 
+  const champion = useAppSelector((state) =>
+    findChampion(state.champions.list, slug as string)
+  );
+
+  if (!champion) {
+    return <div>Champion non trouvé</div>;
+  }
   return (
     <div className="data-champion">
       <img

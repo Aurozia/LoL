@@ -30,7 +30,7 @@ export default function Header() {
             className={`menu-button ${openChampionList ? "clicked" : ""}`}
             type="button"
             onClick={() => {
-              dispatch(championList(true));
+              dispatch(championList(!openChampionList));
               if (openRoleList) dispatch(roleList(false));
               if (openTypeList) dispatch(typeList(false));
             }}
@@ -56,7 +56,7 @@ export default function Header() {
             className={`menu-button ${openRoleList ? "clicked" : ""}`}
             type="button"
             onClick={() => {
-              dispatch(roleList(true));
+              dispatch(roleList(!openRoleList));
               if (openChampionList) dispatch(championList(false));
               if (openTypeList) dispatch(typeList(false));
             }}
@@ -76,7 +76,7 @@ export default function Header() {
             className={`menu-button ${openTypeList ? "clicked" : ""}`}
             type="button"
             onClick={() => {
-              dispatch(typeList(true));
+              dispatch(typeList(!openTypeList));
               if (openChampionList) dispatch(championList(false));
               if (openRoleList) dispatch(roleList(false));
             }}
