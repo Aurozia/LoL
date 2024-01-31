@@ -19,11 +19,11 @@ Pour démarrer le projet, voici les différentes étapes à suivre.
 
 ### Cloner le dépôt
 
-Commencez par ouvrir le terminal et exécutez la commande suivante pour cloner le dépôt du projet : `git@github.com:Aurozia/LoL.git`
+Commencez par ouvrir le terminal et exécutez la commande suivante pour cloner le dépôt du projet : `git clone https://github.com/Aurozia/LoL.git`
 
 ### Installation des dépendances
 
-Ensuite, rendez-vous dans le répertoire du projet avec la commande suivante : `cd lol-project`
+Ensuite, rendez-vous dans le répertoire du projet avec la commande suivante : `cd LoL/lol-project`
 
 Une fois dans le répertoire, installez les dépendances nécessaires, y compris React Router et React Router DOM, en utilisant npm : `npm install @reduxjs/toolkit react-redux react-router react-router-dom`
 
@@ -49,11 +49,11 @@ To start the project, here are the steps to follow.
 
 ### Clone the repository
 
-Begin by opening the terminal and execute the following command to clone the project repository: `git@github.com:Aurozia/LoL.git`
+Begin by opening the terminal and execute the following command to clone the project repository: `git clone https://github.com/Aurozia/LoL.git`
 
 ### Install dependencies
 
-Next, navigate to the project directory with the following command: `cd lol-project`
+Next, navigate to the project directory with the following command: `cd LoL/lol-project`
 
 Once in the directory, install the necessary dependencies, including React Router and React Router DOM, using npm:  `npm install @reduxjs/toolkit react-redux react-router react-router-dom`
 

@@ -1549,9 +1549,10 @@ export const championData: Champion[] = [
   {
     id: 123,
     name: "Smolder",
-    alias: "Le jeune fougueux",
+    alias: "Dragonnet flamboyant",
     slug: "smolder",
-    description: "Smolder est un vrai petit farceur.",
+    description:
+      "Caché dans les falaises escarpées de la frontière noxienne et attentivement surveillé par sa mère, un jeune dragon apprend ce que signifie être l'héritier de la lignée impériale des dragons camavoriens. Joueur et impatient de grandir, Smolder est prêt à tout pour développer ses nouvelles compétences. Même s'il n'est encore qu'un dragonnet, ses compétences sont déjà impressionnantes : il met aisément le feu à tout ce qui peut brûler.",
     picture: "src/assets/champions/smolder.jpg",
     release_date: "2024-01-31",
     role: findRoleByName("ADC"),
